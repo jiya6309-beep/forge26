@@ -1,0 +1,12 @@
+streamlit
+streamlit-folium
+folium
+langgraph
+google-genai
+groq
+requests
+python-dotenv
+psycopg[binary]
+shapely
+pandas
+pydantic
