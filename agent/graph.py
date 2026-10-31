@@ -301,7 +301,10 @@ def draft(state: AgentState) -> dict:
         p, s, opt = d["plan"], d["plan"]["shipment"], d["option"]
         if opt["type"] == "reroute":
             q.set_shipment_status(s["id"], "at_risk",
-                                  p["route"].chosen.to_feature(proposed=True, shipment_id=s["id"]))
+                                  p["route"].chosen.to_feature(proposed=True, shipment_id=s["id"],
+                                                              extra_km=round(p["route"].extra_km, 1),
+                                                              rationale=d["rationale"],
+                                                              decided_by=d["decided_by"]))
             trace.append(_t("draft", f"#{s['id']}: reroute proposed, awaiting approval"))
         elif opt["type"] == "supplier":
             alt = p["alternatives"][int(d["option_id"][1:]) - 1]

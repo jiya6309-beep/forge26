@@ -63,8 +63,14 @@ CONVENIENCE_OK = ("trader", "general", "kirana", "provision", "agenc", "wholesal
                   "enterprise", "store", "mart", "supply", "suppliers", "distribut")
 
 
+GENERIC = {"store", "shop", "mart", "general store", "kirana", "kirana store",
+           "supermarket", "super market", "provision store", "traders", "wholesale"}
+
+
 def _is_fmcg(name: str) -> bool:
-    n = name.lower()
+    n = name.lower().strip(" .,-")
+    if n in GENERIC or len(n) < 5:      # placeholder names like "store" look broken
+        return False
     return not any(w in n for w in NOT_FMCG)
 rng = random.Random(26)   # fixed seed: the same data every run
 
