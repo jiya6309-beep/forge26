@@ -1,0 +1,603 @@
+{
+ "warehouse": [
+  {
+   "name": "VRL Logistics",
+   "lat": 22.9736808,
+   "lon": 72.4918833,
+   "osm_id": "node/12777942921",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Kankaria Railway Shed",
+   "lat": 23.0112631,
+   "lon": 72.6035176,
+   "osm_id": "way/317383767",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Kankaria Railway Shed",
+   "lat": 23.0108001,
+   "lon": 72.6033579,
+   "osm_id": "way/317383768",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Ahmedabad Warehouse (OSM 1302483195)",
+   "lat": 23.0307018,
+   "lon": 72.5679372,
+   "osm_id": "way/1302483195",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Vadodara Warehouse (OSM 1154052854)",
+   "lat": 22.1744654,
+   "lon": 73.1651346,
+   "osm_id": "way/1154052854",
+   "city": "Vadodara"
+  },
+  {
+   "name": "Vadodara Warehouse (OSM 1154052855)",
+   "lat": 22.1754973,
+   "lon": 73.1654884,
+   "osm_id": "way/1154052855",
+   "city": "Vadodara"
+  },
+  {
+   "name": "Surat Warehouse (OSM 1488570375)",
+   "lat": 21.1606843,
+   "lon": 72.7018428,
+   "osm_id": "way/1488570375",
+   "city": "Surat"
+  },
+  {
+   "name": "Mumbai Warehouse (OSM 72273558)",
+   "lat": 18.9521974,
+   "lon": 72.8403468,
+   "osm_id": "way/72273558",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Mumbai Warehouse (OSM 72273560)",
+   "lat": 18.9527705,
+   "lon": 72.8405003,
+   "osm_id": "way/72273560",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Mumbai Warehouse (OSM 72273564)",
+   "lat": 18.953364,
+   "lon": 72.8406435,
+   "osm_id": "way/72273564",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Mumbai Warehouse (OSM 322188913)",
+   "lat": 18.9707484,
+   "lon": 72.9562873,
+   "osm_id": "way/322188913",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Mumbai Warehouse (OSM 322190646)",
+   "lat": 18.9687776,
+   "lon": 72.955789,
+   "osm_id": "way/322190646",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Mumbai Warehouse (OSM 322190647)",
+   "lat": 18.9685308,
+   "lon": 72.9559483,
+   "osm_id": "way/322190647",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Mumbai Warehouse (OSM 322190648)",
+   "lat": 18.9686183,
+   "lon": 72.9560247,
+   "osm_id": "way/322190648",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Mumbai Warehouse (OSM 322190649)",
+   "lat": 18.9686819,
+   "lon": 72.9561259,
+   "osm_id": "way/322190649",
+   "city": "Mumbai"
+  },
+  {
+   "name": "PTYS",
+   "lat": 18.9709867,
+   "lon": 72.9560344,
+   "osm_id": "way/322196026",
+   "city": "Mumbai"
+  },
+  {
+   "name": "M. M. Store",
+   "lat": 18.9706547,
+   "lon": 72.9558246,
+   "osm_id": "way/322196027",
+   "city": "Mumbai"
+  }
+ ],
+ "supplier": [
+  {
+   "name": "Arihant Agency",
+   "lat": 23.0235904,
+   "lon": 72.5912229,
+   "osm_id": "node/631823296",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Bharat Kirana Stores",
+   "lat": 23.0380231,
+   "lon": 72.5889014,
+   "osm_id": "node/1369674748",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Monte Carlo Warehouse",
+   "lat": 23.0351743,
+   "lon": 72.5540638,
+   "osm_id": "node/8139065150",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Mukesh Provisional Store",
+   "lat": 22.982454,
+   "lon": 72.6033136,
+   "osm_id": "node/14050919496",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "SHREE JAGDISH FARSAN MART No.1",
+   "lat": 22.3025891,
+   "lon": 73.2044829,
+   "osm_id": "node/12017447993",
+   "city": "Vadodara"
+  },
+  {
+   "name": "Prince Traders",
+   "lat": 21.0856358,
+   "lon": 72.9633767,
+   "osm_id": "node/6187578178",
+   "city": "Surat"
+  },
+  {
+   "name": "Bajrang General Store",
+   "lat": 22.2883433,
+   "lon": 70.7852903,
+   "osm_id": "node/11830458639",
+   "city": "Rajkot"
+  },
+  {
+   "name": "HINGLAJ TRADERS",
+   "lat": 21.720564,
+   "lon": 72.1566881,
+   "osm_id": "node/12595104925",
+   "city": "Bhavnagar"
+  },
+  {
+   "name": "store",
+   "lat": 19.0429129,
+   "lon": 72.9291774,
+   "osm_id": "node/1396839448",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Laxmi general store",
+   "lat": 19.0423412,
+   "lon": 72.933379,
+   "osm_id": "node/1398694204",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Raghuvir Stores",
+   "lat": 19.1032024,
+   "lon": 72.8481771,
+   "osm_id": "node/1575392943",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Jayant Janaral Stores",
+   "lat": 19.103618,
+   "lon": 72.8527235,
+   "osm_id": "node/1579307832",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Ganesh Stores",
+   "lat": 19.1038094,
+   "lon": 72.8529082,
+   "osm_id": "node/1579323417",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Store",
+   "lat": 19.0733723,
+   "lon": 72.8234599,
+   "osm_id": "node/1641803676",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Store",
+   "lat": 19.0733981,
+   "lon": 72.8235662,
+   "osm_id": "node/1641803679",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Store",
+   "lat": 19.0734907,
+   "lon": 72.8235607,
+   "osm_id": "node/1641803683",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Anupam Superstore",
+   "lat": 19.2277958,
+   "lon": 72.85551,
+   "osm_id": "node/1891645603",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Sadguru Traders",
+   "lat": 19.0624858,
+   "lon": 72.8297629,
+   "osm_id": "node/2173095183",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Roman Super Store",
+   "lat": 19.1293992,
+   "lon": 72.8187821,
+   "osm_id": "node/2370231813",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Sea Spray Provision Store",
+   "lat": 19.0707767,
+   "lon": 72.8225462,
+   "osm_id": "node/2680368064",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Student's General Store",
+   "lat": 18.9160053,
+   "lon": 72.8195848,
+   "osm_id": "node/2688500005",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Deepak General Store",
+   "lat": 19.0629496,
+   "lon": 72.8443925,
+   "osm_id": "node/2947820900",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Welcome General Store",
+   "lat": 19.0412194,
+   "lon": 72.9109498,
+   "osm_id": "node/3201058555",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Highway Store",
+   "lat": 19.0602261,
+   "lon": 72.8433009,
+   "osm_id": "node/3207619832",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Mukesh Store",
+   "lat": 19.0620717,
+   "lon": 72.8441564,
+   "osm_id": "node/3207680706",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Rohan Kirana Store",
+   "lat": 19.0610961,
+   "lon": 72.8964783,
+   "osm_id": "node/3529581958",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Maru Stores",
+   "lat": 19.1130816,
+   "lon": 72.8621873,
+   "osm_id": "node/3659794380",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Bharat Grain Stores",
+   "lat": 19.0664838,
+   "lon": 72.8431506,
+   "osm_id": "node/3764931995",
+   "city": "Mumbai"
+  }
+ ],
+ "store": [
+  {
+   "name": "10 (Ten) Acres Mall",
+   "lat": 23.01524,
+   "lon": 72.5965751,
+   "osm_id": "node/440360562",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Shree Aaiji Super Market",
+   "lat": 23.0856343,
+   "lon": 72.5646439,
+   "osm_id": "node/2211695012",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Bopal Vegetable Market",
+   "lat": 23.0307489,
+   "lon": 72.4718735,
+   "osm_id": "node/3370726902",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Star Bazaar",
+   "lat": 23.0269648,
+   "lon": 72.5242142,
+   "osm_id": "node/4199023908",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Big Bazaar",
+   "lat": 23.0147236,
+   "lon": 72.5975122,
+   "osm_id": "node/4368248194",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Reliance Smart",
+   "lat": 23.0475825,
+   "lon": 72.5265833,
+   "osm_id": "node/4444998991",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "DMart",
+   "lat": 23.0552881,
+   "lon": 72.6711806,
+   "osm_id": "node/4478346291",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "Arved transcube Plaza",
+   "lat": 23.0679571,
+   "lon": 72.5760578,
+   "osm_id": "node/4481079389",
+   "city": "Ahmedabad"
+  },
+  {
+   "name": "D'Mart",
+   "lat": 22.294938,
+   "lon": 73.1530793,
+   "osm_id": "node/2297198351",
+   "city": "Vadodara"
+  },
+  {
+   "name": "Reliance Fresh",
+   "lat": 22.3043297,
+   "lon": 73.2391254,
+   "osm_id": "node/4809037399",
+   "city": "Vadodara"
+  },
+  {
+   "name": "Aarya Mart",
+   "lat": 22.3570606,
+   "lon": 73.1180171,
+   "osm_id": "node/7639935615",
+   "city": "Vadodara"
+  },
+  {
+   "name": "Gelco Sales",
+   "lat": 22.2994009,
+   "lon": 73.1983893,
+   "osm_id": "node/10945733130",
+   "city": "Vadodara"
+  },
+  {
+   "name": "kiara spa",
+   "lat": 21.1702792,
+   "lon": 72.7892666,
+   "osm_id": "node/5596435395",
+   "city": "Surat"
+  },
+  {
+   "name": "Raj World",
+   "lat": 21.2138756,
+   "lon": 72.7713871,
+   "osm_id": "node/6046844185",
+   "city": "Surat"
+  },
+  {
+   "name": "Dhiraj sons",
+   "lat": 21.2136445,
+   "lon": 72.885774,
+   "osm_id": "node/6190467274",
+   "city": "Surat"
+  },
+  {
+   "name": "Goraji SuperStore",
+   "lat": 21.1561135,
+   "lon": 72.8076604,
+   "osm_id": "node/8094418004",
+   "city": "Surat"
+  },
+  {
+   "name": "MIrror glass worldwide",
+   "lat": 21.1996202,
+   "lon": 72.8592101,
+   "osm_id": "node/12224099041",
+   "city": "Surat"
+  },
+  {
+   "name": "cura123",
+   "lat": 21.2315517,
+   "lon": 72.8662383,
+   "osm_id": "node/12959201389",
+   "city": "Surat"
+  },
+  {
+   "name": "A.V.SONS",
+   "lat": 21.1741867,
+   "lon": 72.7955727,
+   "osm_id": "node/13130294281",
+   "city": "Surat"
+  },
+  {
+   "name": "Mahakali Super Store",
+   "lat": 21.2131528,
+   "lon": 72.8399107,
+   "osm_id": "node/13858043729",
+   "city": "Surat"
+  },
+  {
+   "name": "lodhika industrial estate",
+   "lat": 22.2472654,
+   "lon": 70.6842752,
+   "osm_id": "node/4292019193",
+   "city": "Rajkot"
+  },
+  {
+   "name": "Crystal Mall",
+   "lat": 22.2797714,
+   "lon": 70.7631838,
+   "osm_id": "node/4488193791",
+   "city": "Rajkot"
+  },
+  {
+   "name": "Golden Supermarket",
+   "lat": 22.2979838,
+   "lon": 70.778634,
+   "osm_id": "node/7503049017",
+   "city": "Rajkot"
+  },
+  {
+   "name": "BigBajar",
+   "lat": 22.55834,
+   "lon": 72.9620994,
+   "osm_id": "node/2579014426",
+   "city": "Anand"
+  },
+  {
+   "name": "FARM CLUSTER",
+   "lat": 22.5608683,
+   "lon": 72.9468611,
+   "osm_id": "node/7329552326",
+   "city": "Anand"
+  },
+  {
+   "name": "Talking Threads Nadiad",
+   "lat": 22.6864302,
+   "lon": 72.8746602,
+   "osm_id": "node/9064177103",
+   "city": "Anand"
+  },
+  {
+   "name": "masala",
+   "lat": 22.5639315,
+   "lon": 72.9460987,
+   "osm_id": "node/9837829167",
+   "city": "Anand"
+  },
+  {
+   "name": "Talking Threads",
+   "lat": 22.6864433,
+   "lon": 72.8746638,
+   "osm_id": "way/979829269",
+   "city": "Anand"
+  },
+  {
+   "name": "Big Bazaar",
+   "lat": 21.7012069,
+   "lon": 72.9913303,
+   "osm_id": "node/1684864439",
+   "city": "Bharuch"
+  },
+  {
+   "name": "Himalya Mall",
+   "lat": 21.7490441,
+   "lon": 72.1369851,
+   "osm_id": "node/5647129707",
+   "city": "Bhavnagar"
+  },
+  {
+   "name": "Reasonable Provision & General Store",
+   "lat": 21.7611076,
+   "lon": 72.1240996,
+   "osm_id": "node/8849659217",
+   "city": "Bhavnagar"
+  },
+  {
+   "name": "Mogal Organics",
+   "lat": 21.7261699,
+   "lon": 72.1571333,
+   "osm_id": "node/12595067509",
+   "city": "Bhavnagar"
+  },
+  {
+   "name": "Heera Panna",
+   "lat": 18.9775387,
+   "lon": 72.8109505,
+   "osm_id": "node/461856747",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Hyper City",
+   "lat": 19.0660445,
+   "lon": 73.0003008,
+   "osm_id": "node/1121956053",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Dechatholon",
+   "lat": 19.1865736,
+   "lon": 72.8350829,
+   "osm_id": "node/1347716867",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Home Town",
+   "lat": 19.1204539,
+   "lon": 72.9263887,
+   "osm_id": "node/1855825021",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Reliance Fresh",
+   "lat": 19.0840224,
+   "lon": 72.9973946,
+   "osm_id": "node/1951979923",
+   "city": "Mumbai"
+  },
+  {
+   "name": "R S Mani Supermarket",
+   "lat": 19.0705394,
+   "lon": 72.8988757,
+   "osm_id": "node/2018031439",
+   "city": "Mumbai"
+  },
+  {
+   "name": "Sahakari Bhandar",
+   "lat": 19.1035347,
+   "lon": 72.8316244,
+   "osm_id": "node/2025969633",
+   "city": "Mumbai"
+  },
+  {
+   "name": "DMart",
+   "lat": 19.209009,
+   "lon": 72.8739023,
+   "osm_id": "node/2097757617",
+   "city": "Mumbai"
+  }
+ ]
+}

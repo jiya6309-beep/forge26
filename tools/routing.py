@@ -151,12 +151,21 @@ def _osrm(points: list[tuple[float, float]]) -> Route:
 PROVIDERS = [("valhalla", _valhalla), ("osrm", _osrm)]
 
 
+_route_cache: dict[tuple, Route] = {}
+
+
 def get_route(points: list[tuple[float, float]], log: list | None = None) -> Route:
-    """points: [(lat, lon), ...] origin, optional waypoints, destination."""
+    """points: [(lat, lon), ...] origin, optional waypoints, destination.
+    Identical requests are served from memory (shipments often share routes)."""
+    key = tuple((round(lat, 4), round(lon, 4)) for lat, lon in points)
+    if key in _route_cache:
+        return _route_cache[key]
     errors = []
     for name, fn in PROVIDERS:
         try:
-            return fn(points)
+            route = fn(points)
+            _route_cache[key] = route
+            return route
         except Exception as e:
             errors.append(f"{name}: {str(e)[:120]}")
             if log is not None:
@@ -231,9 +240,12 @@ def _path_km(points: list[tuple[float, float]]) -> float:
 
 def find_safe_route(origin: tuple[float, float], dest: tuple[float, float],
                     hazards: list[Hazard], margin_km: float = 5,
-                    tries_per_round: int = 6, rounds: int = 2) -> SafeRouteResult:
+                    tries_per_round: int = 6, rounds: int = 2,
+                    original: Route | None = None) -> SafeRouteResult:
+    """original: pass the base route if you already have it (saves an API call)."""
     log: list[dict] = []
-    original = get_route([origin, dest], log)
+    if original is None:
+        original = get_route([origin, dest], log)
     blocking = route_hits(original, hazards)
     log.append({"event": "base_route", "km": round(original.km, 1),
                 "provider": original.provider,
@@ -293,10 +305,14 @@ def find_safe_route(origin: tuple[float, float], dest: tuple[float, float],
                         "extra_km": round(best.km - original.km, 1)})
             return SafeRouteResult("rerouted", original, best, blocking, log)
 
-        log.append({"event": "self_correct",
-                    "reason": f"no clear detour at {margin_km} km margin",
-                    "next_margin_km": margin_km * 2})
-        margin_km *= 2
+        if rnd < rounds:
+            log.append({"event": "self_correct",
+                        "reason": f"no clear detour at {margin_km} km margin",
+                        "next_margin_km": margin_km * 2})
+            margin_km *= 2
+        else:
+            log.append({"event": "give_up", "rounds": rounds,
+                        "reason": f"no clear detour up to {margin_km} km margin"})
 
     return SafeRouteResult("no_safe_route", original, None, blocking, log)
 
