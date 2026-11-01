@@ -5,9 +5,9 @@ It watches live disaster alerts and weather forecasts, finds which shipments are
 reroutes trucks around danger zones, finds backup suppliers with stock, and drafts
 orders for a human to approve, showing every step of its reasoning.
 
-🔗 **Live app:** LIVE_APP_URL  
-🎬 **Demo video:** DEMO_VIDEO_URL  
-📊 **Pitch deck:** DECK_URL  
+🔗 **Live app:** https://supplysenetial.streamlit.app/ 
+🎬 **Demo video:** https://drive.google.com/file/d/106mT5rqgK1cNUaj2uGZzV3eymmtrOezs/view?usp=drive_link  
+📊 **Pitch deck:** https://docs.google.com/presentation/d/1Kvzacs7wsT_1hNlCoOW8qTc2nHjTzFo1/edit?usp=sharing&ouid=101812570380967967487&rtpof=true&sd=true  
 🏷️ **Track:** Climate, Resource Infrastructure & Global Supply Resilience (Forge'26)
 
 ---
