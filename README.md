@@ -238,5 +238,5 @@ starting state.
 
 ## Team
 
-- TEAM_MEMBER_1
-- TEAM_MEMBER_2
+- JIYA CHAUDHARY
+- NIRAV BAGADA
