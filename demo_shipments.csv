@@ -1,0 +1,5 @@
+origin,sku,qty,dest_name,dest_lat,dest_lon
+VRL Logistics,RICE-25KG,60,"Reliance Fresh, Vadodara",22.3100,73.1700
+VRL Logistics,SUGAR-50KG,40,"Star Bazaar, Surat",21.1900,72.8100
+Unknown Depot,TEA-500G-CASE,20,"Some Store, Anand",22.5600,72.9500
+VRL Logistics,SALT-1KG-CASE,30,"Wrong Place",51.5000,-0.1200

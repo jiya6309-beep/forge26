@@ -36,7 +36,9 @@ def _gemini(system: str, prompt: str) -> tuple[str, str]:
     from google.genai import types
 
     model = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
-    resp = genai.Client(api_key=key).models.generate_content(
+    # A short timeout: an overloaded model should hand over to Groq, not stall the run.
+    client = genai.Client(api_key=key, http_options=types.HttpOptions(timeout=25_000))
+    resp = client.models.generate_content(
         model=model,
         contents=prompt,
         config=types.GenerateContentConfig(
@@ -78,7 +80,7 @@ def _groq(system: str, prompt: str) -> tuple[str, str]:
         raise LLMUnavailable("GROQ_API_KEY not set")
     from groq import Groq
 
-    client = Groq(api_key=key)
+    client = Groq(api_key=key, timeout=25, max_retries=1)
     model = _pick_groq_model(client)
     resp = client.chat.completions.create(
         model=model,

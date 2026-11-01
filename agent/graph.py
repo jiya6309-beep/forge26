@@ -29,7 +29,7 @@ from tools.routing import RoutingError, find_safe_route, get_route, haversine_km
 
 MAX_ACCEPTABLE_DELAY_MIN = 180   # a reroute adding more than 3 h triggers re-sourcing
 NEAR_DEG = 0.5                   # ~55 km: shipments farther than this from every hazard skip routing
-MAX_SUPPLIERS_TO_ROUTE = 3
+MAX_SUPPLIERS_TO_ROUTE = 2      # nearest first; two real choices is enough
 
 
 class AgentState(TypedDict, total=False):
@@ -157,7 +157,7 @@ def resource(state: AgentState) -> dict:
                         f">= {s['qty']} x {s['sku']}; routing the nearest {min(len(suppliers), MAX_SUPPLIERS_TO_ROUTE)}"))
         for c in suppliers[:MAX_SUPPLIERS_TO_ROUTE]:
             try:
-                r = find_safe_route((c["lat"], c["lon"]), d, hazards)
+                r = find_safe_route((c["lat"], c["lon"]), d, hazards, tries_per_round=3, rounds=1)
             except RoutingError as e:
                 trace.append(_t("resource", f"#{s['id']}: {c['name']} unroutable ({str(e)[:60]})"))
                 continue

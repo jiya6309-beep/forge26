@@ -15,9 +15,11 @@ Test:  python -m tools.routing     (run from the project root)
 """
 from __future__ import annotations
 
+import json
 import math
 import time
 from dataclasses import dataclass, field
+from pathlib import Path
 
 from shapely.geometry import LineString, Point
 from shapely.ops import unary_union
@@ -151,20 +153,57 @@ def _osrm(points: list[tuple[float, float]]) -> Route:
 PROVIDERS = [("valhalla", _valhalla), ("osrm", _osrm)]
 
 
-_route_cache: dict[tuple, Route] = {}
+# Routes are cached in memory and on disk. Shipments often share a corridor,
+# and the public router allows ~1 request/second, so a warm cache turns a
+# multi-minute run into seconds. Delete route_cache.json to start cold.
+CACHE_FILE = Path(__file__).resolve().parent.parent / "route_cache.json"
+SIMPLIFY_DEG = 0.0005   # ~50 m; keeps geometry accurate but much smaller
+
+
+def _key(points) -> str:
+    return ";".join(f"{lat:.4f},{lon:.4f}" for lat, lon in points)
+
+
+def _load_cache() -> dict[str, Route]:
+    try:
+        raw = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+        return {k: Route([tuple(c) for c in v["coords"]], v["km"], v["minutes"], v["provider"])
+                for k, v in raw.items()}
+    except (FileNotFoundError, ValueError, KeyError, TypeError):
+        return {}
+
+
+def _save_cache():
+    data = {k: {"coords": r.coords, "km": r.km, "minutes": r.minutes, "provider": r.provider}
+            for k, r in _route_cache.items()}
+    tmp = CACHE_FILE.with_suffix(".tmp")
+    try:
+        tmp.write_text(json.dumps(data), encoding="utf-8")
+        tmp.replace(CACHE_FILE)
+    except OSError:
+        pass   # a read-only disk just means no persistent cache
+
+
+_route_cache: dict[str, Route] = _load_cache()
+
+
+def _simplified(route: Route) -> Route:
+    coords = list(LineString(route.coords).simplify(SIMPLIFY_DEG).coords)
+    return Route([(round(lon, 5), round(lat, 5)) for lon, lat in coords],
+                 route.km, route.minutes, route.provider)
 
 
 def get_route(points: list[tuple[float, float]], log: list | None = None) -> Route:
-    """points: [(lat, lon), ...] origin, optional waypoints, destination.
-    Identical requests are served from memory (shipments often share routes)."""
-    key = tuple((round(lat, 4), round(lon, 4)) for lat, lon in points)
+    """points: [(lat, lon), ...] origin, optional waypoints, destination."""
+    key = _key(points)
     if key in _route_cache:
         return _route_cache[key]
     errors = []
     for name, fn in PROVIDERS:
         try:
-            route = fn(points)
+            route = _simplified(fn(points))
             _route_cache[key] = route
+            _save_cache()
             return route
         except Exception as e:
             errors.append(f"{name}: {str(e)[:120]}")
@@ -240,7 +279,7 @@ def _path_km(points: list[tuple[float, float]]) -> float:
 
 def find_safe_route(origin: tuple[float, float], dest: tuple[float, float],
                     hazards: list[Hazard], margin_km: float = 5,
-                    tries_per_round: int = 6, rounds: int = 2,
+                    tries_per_round: int = 4, rounds: int = 2,
                     original: Route | None = None) -> SafeRouteResult:
     """original: pass the base route if you already have it (saves an API call)."""
     log: list[dict] = []
