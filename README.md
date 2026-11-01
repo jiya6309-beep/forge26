@@ -6,7 +6,7 @@ reroutes trucks around danger zones, finds backup suppliers with stock, and draf
 orders for a human to approve, showing every step of its reasoning.
 
 🔗 **Live app:** https://supplysenetial.streamlit.app/ 
-🎬 **Demo video:** https://drive.google.com/file/d/106mT5rqgK1cNUaj2uGZzV3eymmtrOezs/view?usp=drive_link  
+🎬 **Demo video:** https://drive.google.com/file/d/1dK-CujSHPEO8QNNxYjc2ClBSckxJ1i2Z/view?usp=sharing
 📊 **Pitch deck:** https://docs.google.com/presentation/d/1Kvzacs7wsT_1hNlCoOW8qTc2nHjTzFo1/edit?usp=sharing&ouid=101812570380967967487&rtpof=true&sd=true  
 🏷️ **Track:** Climate, Resource Infrastructure & Global Supply Resilience (Forge'26)
 
